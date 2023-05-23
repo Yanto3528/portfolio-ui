@@ -12,12 +12,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       error,
       disabled,
       colorScheme,
+      radius,
       label,
       labelClassName,
       wrapperClassName,
       size,
       id,
       rightElement,
+      leftElement,
       ...props
     },
     ref
@@ -33,8 +35,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         disabled={disabled}
         colorScheme={colorScheme}
         size={size}
+        radius={radius}
         className={wrapperClassName}
       >
+        {leftElement && (
+          <span className="pl-2 text-gray-500">{leftElement}</span>
+        )}
         <input
           ref={ref}
           className={inputStyles({ className })}
@@ -42,7 +48,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           id={id}
           {...props}
         />
-        {rightElement}
+        {rightElement && (
+          <span className="pr-2 text-gray-500">{rightElement}</span>
+        )}
       </FormElementWrapper>
       {error && <FormErrorMessage>{error}</FormErrorMessage>}
     </div>

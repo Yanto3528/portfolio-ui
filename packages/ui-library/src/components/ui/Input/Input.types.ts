@@ -10,4 +10,5 @@ type InputStylesProps = VariantProps<typeof inputStyles>;
 export type InputProps = Omit<ComponentPropsWithoutRef<"input">, "size"> &
   FormElementProps & {
     rightElement?: ReactNode;
+    leftElement?: ReactNode;
   };

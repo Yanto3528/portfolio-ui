@@ -8,6 +8,7 @@ export function FormElementWrapper({
   disabled,
   colorScheme,
   size,
+  radius,
   ...props
 }: FormELementWrapperProps) {
   return (
@@ -16,6 +17,7 @@ export function FormElementWrapper({
         disabled,
         size,
         colorScheme: error ? "error" : colorScheme,
+        radius,
         className,
       })}
       {...props}
