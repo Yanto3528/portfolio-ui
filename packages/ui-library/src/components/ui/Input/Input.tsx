@@ -39,7 +39,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         className={wrapperClassName}
       >
         {leftElement && (
-          <span className="pl-2 text-gray-500">{leftElement}</span>
+          <span className="pl-2 text-gray-400 flex items-center justify-center">
+            {leftElement}
+          </span>
         )}
         <input
           ref={ref}
@@ -49,7 +51,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {rightElement && (
-          <span className="pr-2 text-gray-500">{rightElement}</span>
+          <span className="pr-2 text-gray-400 flex items-center justify-center">
+            {rightElement}
+          </span>
         )}
       </FormElementWrapper>
       {error && <FormErrorMessage>{error}</FormErrorMessage>}

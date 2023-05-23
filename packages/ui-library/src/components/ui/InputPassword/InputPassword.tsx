@@ -16,12 +16,8 @@ const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>(
           type={showContent ? "text" : "password"}
           ref={ref}
           rightElement={
-            <button
-              type="button"
-              onClick={toggle}
-              className="px-2 text-gray-400"
-            >
-              {showContent ? <EyeOff /> : <Eye />}
+            <button type="button" onClick={toggle}>
+              {showContent ? <EyeOff size={20} /> : <Eye size={20} />}
               <div className="sr-only">Toggle show password</div>
             </button>
           }
