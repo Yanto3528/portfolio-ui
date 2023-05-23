@@ -3,7 +3,6 @@ import { User2 } from "lucide-react";
 
 import InputNumber from "./InputNumber";
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
   title: "Components/InputNumber",
   component: InputNumber,
@@ -28,7 +27,6 @@ const defaultArgs: Story["args"] = {
   max: 100000,
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
     ...defaultArgs,
