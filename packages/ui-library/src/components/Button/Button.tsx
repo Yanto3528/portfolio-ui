@@ -1,8 +1,37 @@
-import { ButtonProps } from "./Button.types";
+import Spinner from "../Spinner";
 
-export default function Button({ children, ...props }: ButtonProps) {
+import { ButtonProps } from "./Button.types";
+import { buttonStyles } from "./Button.styles";
+
+export default function Button({
+  children,
+  size,
+  colorScheme,
+  radius,
+  variant,
+  className,
+  loading,
+  disabled,
+  ...props
+}: ButtonProps) {
   return (
-    <button className="bg-primary px-4 py-2" {...props}>
+    <button
+      className={buttonStyles({
+        size,
+        variant,
+        colorScheme,
+        radius,
+        className,
+      })}
+      disabled={disabled || loading}
+      {...props}
+    >
+      {loading && (
+        <Spinner
+          colorScheme={variant === "outline" ? "inherit" : "white"}
+          size="sm"
+        />
+      )}
       {children}
     </button>
   );

@@ -1,25 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Button from "./Button";
+import Spinner from "./Spinner";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Spinner",
+  component: Spinner,
   tags: ["autodocs"],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Spinner>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs: Story["args"] = {
-  children: "Submit",
   colorScheme: "primary",
-  variant: null,
   size: "md",
-  radius: "md",
-  loading: false,
-  disabled: false,
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
@@ -29,47 +24,17 @@ export const Primary: Story = {
   },
 };
 
-export const Danger: Story = {
+export const White: Story = {
   args: {
     ...defaultArgs,
-    colorScheme: "danger",
+    colorScheme: "white",
   },
 };
 
-export const Outline: Story = {
+export const Inherit: Story = {
   args: {
     ...defaultArgs,
-    variant: "outline",
-  },
-};
-
-export const OutlineDanger: Story = {
-  args: {
-    ...defaultArgs,
-    colorScheme: "danger",
-    variant: "outline",
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    ...defaultArgs,
-    disabled: true,
-  },
-};
-
-export const Loading: Story = {
-  args: {
-    ...defaultArgs,
-    loading: true,
-  },
-};
-
-export const OutlineLoading: Story = {
-  args: {
-    ...defaultArgs,
-    variant: "outline",
-    loading: true,
+    colorScheme: "inherit",
   },
 };
 

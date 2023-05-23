@@ -1,3 +1,11 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export type ButtonProps = ComponentPropsWithoutRef<"button">;
+import { buttonStyles } from "./Button.styles";
+import { VariantProps } from "@/lib/tailwind-variant";
+
+type ButtonStylesProps = VariantProps<typeof buttonStyles>;
+
+export type ButtonProps = ComponentPropsWithoutRef<"button"> &
+  ButtonStylesProps & {
+    loading?: boolean;
+  };
