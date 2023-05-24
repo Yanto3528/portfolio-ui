@@ -55,8 +55,8 @@ module.exports = {
     },
   },
   plugins: [
-    // require('tailwindcss-radix')(),
-    // require('tailwindcss-animate'),
-    // require('tailwind-scrollbar')({ nocompatible: true }),
+    require("tailwindcss-radix")(),
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
   ],
 };

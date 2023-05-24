@@ -8,4 +8,5 @@ type AvatarStylesProps = VariantProps<typeof avatarStyles>;
 export type AvatarProps = AvatarStylesProps &
   ComponentPropsWithoutRef<"img"> & {
     defaultImage?: string;
+    fallback?: string;
   };

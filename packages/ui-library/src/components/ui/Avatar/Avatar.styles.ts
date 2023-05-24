@@ -1,14 +1,14 @@
 import { tv } from "@/lib/tailwind-variant";
 
 export const avatarStyles = tv(
-  "rounded-full block object-cover aspect-square",
+  "rounded-full flex items-center justify-center object-cover aspect-square font-medium",
   {
     variants: {
       size: {
-        sm: "w-5",
-        md: "w-8",
-        lg: "w-12",
-        xl: "w-16",
+        sm: "w-5 text-xs",
+        md: "w-8 text-base",
+        lg: "w-12 text-2xl",
+        xl: "w-16 text-3xl",
       },
     },
     defaultVariants: {

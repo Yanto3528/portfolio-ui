@@ -16,11 +16,19 @@ const defaultArgs: Story["args"] = {
   alt: "profile",
   defaultImage: "",
   size: "md",
+  fallback: "",
 };
 
 export const Default: Story = {
   args: {
     ...defaultArgs,
+  },
+};
+
+export const WithFallback: Story = {
+  args: {
+    ...defaultArgs,
+    fallback: "Yanto Lee",
   },
 };
 
