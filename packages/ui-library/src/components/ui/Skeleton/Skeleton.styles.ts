@@ -1,23 +1,32 @@
 import { tv } from "@/lib/tailwind-variant";
 
+const radiusClasses = {
+  sm: "rounded-sm",
+  md: "rounded-md",
+  lg: "rounded-lg",
+  full: "rounded-full",
+};
+
 export const skeletonStyles = tv(
-  "rounded-md relative overflow-hidden w-full h-6 bg-gray-200",
+  "relative overflow-hidden w-full h-[1.3em] bg-gray-200",
   {
     variants: {
-      rounded: {
-        true: "rounded-full",
-      },
+      radius: radiusClasses,
+    },
+    defaultVariants: {
+      radius: "md",
     },
   }
 );
 
 export const skeletonAnimationStyles = tv(
-  "rounded-md top-0 left-0 right-0 bottom-0 h-full -translate-x-full bg-gradient-skeleton animate-skeleton-shimmer",
+  "top-0 left-0 right-0 bottom-0 h-full -translate-x-full bg-gradient-skeleton animate-skeleton-shimmer",
   {
     variants: {
-      rounded: {
-        true: "rounded-full",
-      },
+      radius: radiusClasses,
+    },
+    defaultVariants: {
+      radius: "md",
     },
   }
 );
