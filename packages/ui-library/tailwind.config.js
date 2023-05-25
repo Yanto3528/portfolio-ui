@@ -43,13 +43,85 @@ module.exports = {
           "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0))",
       },
       keyframes: {
+        slideDown: {
+          "0%": { height: 0, borderBottom: 0 },
+          "100%": {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        slideUp: {
+          "0%": {
+            height: "var(--radix-accordion-content-height)",
+          },
+          "100%": { height: 0, borderBottom: 0 },
+        },
+        slideDownWithBorder: {
+          "0%": { height: 0, borderBottom: "none" },
+          "100%": {
+            height: "var(--radix-accordion-content-height)",
+            borderBottom: `1px solid ${colors.gray[200]}`,
+          },
+        },
+        slideUpWithBorder: {
+          "0%": {
+            height: "var(--radix-accordion-content-height)",
+            borderBottom: `1px solid ${colors.gray[200]}`,
+          },
+          "100%": { height: 0, borderBottom: "none" },
+        },
+        tooltipFadeIn: {
+          "0%": {
+            opacity: 0,
+            transform: "scale(0.7)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "scale(1)",
+          },
+        },
+        tooltipFadeOut: {
+          "0%": {
+            opacity: 1,
+            transform: "scale(1)",
+          },
+          "100%": {
+            opacity: 0,
+            transform: "scale(0.7)",
+          },
+        },
         skeletonShimmer: {
           "100%": {
             transform: "translateX(100%)",
           },
         },
+        scaleIn: {
+          "0%": {
+            transform: "scale(0)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+        scaleOut: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "100%": {
+            transform: "scale(0)",
+          },
+        },
       },
       animation: {
+        "slide-down": "slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards",
+        "slide-up": "slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards",
+        "slide-down-with-border":
+          "slideDownWithBorder 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards",
+        "slide-up-with-border":
+          "slideUpWithBorder 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards",
+        "tooltip-fade-in": "tooltipFadeIn 200ms ease-out forwards",
+        "tooltip-fade-out": "tooltipFadeOut 200ms ease-out forwards",
+        "scale-in": "scaleIn 200ms ease-out forwards",
+        "scale-out": "scaleOut 200ms ease-out forwards",
         "skeleton-shimmer": "skeletonShimmer 1000ms infinite",
       },
     },
