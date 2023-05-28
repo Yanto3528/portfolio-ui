@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { Root, Indicator } from "@radix-ui/react-checkbox";
 import { twMerge } from "tailwind-merge";
-import { Check } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 
 import { FormLabel } from "../Form";
 import { CheckboxProps } from "./Checkbox.types";
@@ -48,7 +48,7 @@ const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
               indicatorClassName
             )}
           >
-            <Check size={12} />
+            <CheckIcon size={12} />
           </Indicator>
         </Root>
         {displayLabel && (
