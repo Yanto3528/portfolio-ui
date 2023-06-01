@@ -85,7 +85,7 @@ module.exports = {
         tooltipFadeIn: {
           "0%": {
             opacity: 0,
-            transform: "scale(0.7)",
+            transform: "scale(0.9)",
           },
           "100%": {
             opacity: 1,
@@ -99,7 +99,7 @@ module.exports = {
           },
           "100%": {
             opacity: 0,
-            transform: "scale(0.7)",
+            transform: "scale(0.9)",
           },
         },
         skeletonShimmer: {
