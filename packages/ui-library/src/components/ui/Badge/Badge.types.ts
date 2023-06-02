@@ -9,4 +9,6 @@ type BadgeStylesProps = VariantProps<typeof badgeStyles>;
 export type BadgeProps = BadgeStylesProps & {
   children: ReactNode;
   className?: string;
+  closeable?: boolean;
+  onClose?: () => void;
 };

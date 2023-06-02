@@ -41,3 +41,18 @@ export const Outline: Story = {
     variant: "outline",
   },
 };
+
+export const Count: Story = {
+  args: {
+    ...defaultArgs,
+    children: 10,
+  },
+};
+
+export const Closeable: Story = {
+  args: {
+    ...defaultArgs,
+    children: 10,
+    closeable: true,
+  },
+};

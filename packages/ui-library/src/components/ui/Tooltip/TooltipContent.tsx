@@ -3,7 +3,7 @@ import { Portal, Content, Arrow } from "@radix-ui/react-tooltip";
 import { tooltipContentStyles } from "./Tooltip.styles";
 import { TooltipContentProps } from "./Tooltip.types";
 
-export default function TooltipContent({
+function TooltipContent({
   side,
   children,
   className,
@@ -24,3 +24,5 @@ export default function TooltipContent({
     </Portal>
   );
 }
+
+export default TooltipContent;

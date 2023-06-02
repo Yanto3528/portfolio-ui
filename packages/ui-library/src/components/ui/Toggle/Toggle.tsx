@@ -4,7 +4,7 @@ import { ToggleSwitch, ToggleLabel } from "./components";
 import { ToggleProvider } from "./Toggle.context";
 import { ToggleProps } from "./Toggle.types";
 
-export default function Toggle({ className, ...props }: ToggleProps) {
+function Toggle({ className, ...props }: ToggleProps) {
   const { children } = props;
 
   return (
@@ -18,3 +18,5 @@ export default function Toggle({ className, ...props }: ToggleProps) {
 
 Toggle.Switch = ToggleSwitch;
 Toggle.Label = ToggleLabel;
+
+export default Toggle;

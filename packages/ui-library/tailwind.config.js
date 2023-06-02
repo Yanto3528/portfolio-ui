@@ -140,6 +140,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("@headlessui/tailwindcss")({ prefix: "ui" }),
     require("tailwindcss-radix")(),
     require("tailwindcss-animate"),
     require("tailwind-scrollbar")({ nocompatible: true }),

@@ -7,7 +7,7 @@ import {
 } from "../../Toggle.styles";
 import { useToggleContext } from "../../Toggle.context";
 
-export default function ToggleSwitch() {
+function ToggleSwitch() {
   const { enabled, onChange, displayLabel, colorScheme } = useToggleContext();
 
   return (
@@ -23,3 +23,5 @@ export default function ToggleSwitch() {
     </Switch>
   );
 }
+
+export default ToggleSwitch;

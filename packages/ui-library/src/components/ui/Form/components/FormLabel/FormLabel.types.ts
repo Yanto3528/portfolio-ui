@@ -1,3 +1,10 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export type FormLabelProps = ComponentPropsWithoutRef<"label">;
+import { VariantProps } from "@/lib/tailwind-variant";
+
+import { formLabelStyles } from "./FormLabel.styles";
+
+type FormLabelStylesProps = VariantProps<typeof formLabelStyles>;
+
+export type FormLabelProps = FormLabelStylesProps &
+  ComponentPropsWithoutRef<"label">;

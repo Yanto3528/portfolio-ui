@@ -1,11 +1,7 @@
 import { spinnerStyles } from "./Spinner.styles";
 import { SpinnerProps } from "./Spinner.types";
 
-export default function Spinner({
-  className,
-  colorScheme,
-  size,
-}: SpinnerProps) {
+function Spinner({ className, colorScheme, size }: SpinnerProps) {
   return (
     <div
       aria-label="loading"
@@ -13,3 +9,5 @@ export default function Spinner({
     />
   );
 }
+
+export default Spinner;
