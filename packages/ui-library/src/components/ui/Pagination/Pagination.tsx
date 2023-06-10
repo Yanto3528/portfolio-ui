@@ -6,7 +6,7 @@ import { paginationItemStyles } from "./Pagination.styles";
 import { PaginationProps } from "./Pagination.types";
 import { twMerge } from "tailwind-merge";
 
-export default function Pagination(props: PaginationProps) {
+function Pagination(props: PaginationProps) {
   const {
     onPageChange,
     totalCount,
@@ -149,3 +149,5 @@ export default function Pagination(props: PaginationProps) {
     </ul>
   );
 }
+
+export default Pagination;

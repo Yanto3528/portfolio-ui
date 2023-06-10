@@ -3,7 +3,7 @@ import Spinner from "../Spinner";
 import { ButtonProps } from "./Button.types";
 import { buttonStyles } from "./Button.styles";
 
-export default function Button({
+function Button({
   children,
   size,
   colorScheme,
@@ -36,3 +36,5 @@ export default function Button({
     </button>
   );
 }
+
+export default Button;

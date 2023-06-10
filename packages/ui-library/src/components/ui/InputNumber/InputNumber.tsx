@@ -28,6 +28,4 @@ const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
   }
 );
 
-InputNumber.displayName = "InputNumber";
-
 export default InputNumber;

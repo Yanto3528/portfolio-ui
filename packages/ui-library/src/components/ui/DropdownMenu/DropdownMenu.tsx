@@ -11,10 +11,7 @@ import {
   DropdownMenuLabel,
 } from "./components";
 
-export default function DropdownMenu({
-  children,
-  ...props
-}: DropdownMenuProps) {
+function DropdownMenu({ children, ...props }: DropdownMenuProps) {
   return <Root {...props}>{children}</Root>;
 }
 
@@ -23,3 +20,5 @@ DropdownMenu.Content = DropdownMenuContent;
 DropdownMenu.Item = DropdownMenuItem;
 DropdownMenu.Separator = Separator;
 DropdownMenu.Label = DropdownMenuLabel;
+
+export default DropdownMenu;

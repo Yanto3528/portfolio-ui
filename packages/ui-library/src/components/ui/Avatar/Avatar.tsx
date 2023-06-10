@@ -17,7 +17,7 @@ const getFallbackName = (name?: string) => {
   return slicedName.map((word) => word?.[0]?.toUpperCase()).join("");
 };
 
-export default function Avatar({
+function Avatar({
   src,
   size,
   className,
@@ -60,3 +60,5 @@ export default function Avatar({
     </div>
   );
 }
+
+export default Avatar;

@@ -3,7 +3,7 @@ import { XIcon } from "lucide-react";
 import { badgeStyles, badgeCloseStyles } from "./Badge.styles";
 import { BadgeProps } from "./Badge.types";
 
-export default function Badge({
+function Badge({
   children,
   className,
   colorScheme,
@@ -26,3 +26,5 @@ export default function Badge({
     </span>
   );
 }
+
+export default Badge;

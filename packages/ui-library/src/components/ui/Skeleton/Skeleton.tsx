@@ -2,13 +2,7 @@ import { twMerge } from "tailwind-merge";
 import { skeletonStyles, skeletonAnimationStyles } from "./Skeleton.styles";
 import { SkeletonProps } from "./Skeleton.types";
 
-export default function Skeleton({
-  radius,
-  width,
-  height,
-  count,
-  className,
-}: SkeletonProps) {
+function Skeleton({ radius, width, height, count, className }: SkeletonProps) {
   if (count && count > 1) {
     const elements = new Array(count).fill(null);
     return (
@@ -39,3 +33,5 @@ export default function Skeleton({
     </div>
   );
 }
+
+export default Skeleton;

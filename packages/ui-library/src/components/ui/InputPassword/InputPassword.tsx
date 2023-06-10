@@ -28,6 +28,4 @@ const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>(
   }
 );
 
-InputPassword.displayName = "InputPassword";
-
 export default InputPassword;

@@ -9,7 +9,7 @@ import {
 import { AccordionProps } from "./Accordion.types";
 import { AccordionProvider } from "./Accordion.context";
 
-export default function Accordion({
+function Accordion({
   className,
   children,
   showBorder = true,
@@ -25,3 +25,5 @@ export default function Accordion({
 Accordion.Item = AccordionItem;
 Accordion.Trigger = AccordionTrigger;
 Accordion.Content = AccordionContent;
+
+export default Accordion;

@@ -27,6 +27,13 @@ export const Primary: Story = {
   },
 };
 
+export const Secondary: Story = {
+  args: {
+    ...defaultArgs,
+    colorScheme: "secondary",
+  },
+};
+
 export const Danger: Story = {
   args: {
     ...defaultArgs,
@@ -37,6 +44,14 @@ export const Danger: Story = {
 export const Outline: Story = {
   args: {
     ...defaultArgs,
+    variant: "outline",
+  },
+};
+
+export const OutlineSecondary: Story = {
+  args: {
+    ...defaultArgs,
+    colorScheme: "secondary",
     variant: "outline",
   },
 };
